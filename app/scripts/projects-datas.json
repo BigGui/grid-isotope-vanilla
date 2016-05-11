@@ -1,0 +1,48 @@
+{"status": "success", "datas": 
+[
+    {
+        "title":      "Projet 1",
+        "classList":  "grid-item grid-item--width2 sites-ecommerce",
+        "id":         9001,
+        "url":        "/clients/burolia.html",
+        "imgXS":      "images/126-xs.jpg",
+        "imgMD":      "images/126.jpg",
+        "text":       "Lorem ipsum"
+    },
+    {
+        "title":      "Projet 2",
+        "classList":  "grid-item sites-ecommerce",
+        "id":         9002,
+        "url":        "/clients/burolia.html",
+        "imgXS":      "images/126-xs.jpg",
+        "imgMD":      "images/126.jpg",
+        "text":       "Lorem ipsum"
+    },
+    {
+        "title":      "Projet 3",
+        "classList":  "grid-item sites-ecommerce",
+        "id":         9003,
+        "url":        "/clients/burolia.html",
+        "imgXS":      "images/126-xs.jpg",
+        "imgMD":      "images/126.jpg",
+        "text":       "Lorem ipsum"
+    },
+    {
+        "title":      "Projet 4",
+        "classList":  "grid-item sites-ecommerce",
+        "id":         9004,
+        "url":        "/clients/burolia.html",
+        "imgXS":      "images/126-xs.jpg",
+        "imgMD":      "images/126.jpg",
+        "text":       "Lorem ipsum"
+    },
+    {
+        "title":      "Projet 5",
+        "classList":  "grid-item sites-ecommerce",
+        "id":         9005,
+        "url":        "/clients/burolia.html",
+        "imgXS":      "images/126-xs.jpg",
+        "imgMD":      "images/126.jpg",
+        "text":       "Lorem ipsum"
+    }
+] }
