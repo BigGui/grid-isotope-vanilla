@@ -69,7 +69,7 @@ GridIsotope.prototype = {
 				document.querySelector('.grid-more').style.display = 'inline-block';
 				
 				// Change l'URL de la page courante avec l'URL filtrée
-				if (event.target.href) changeUrl('', event.target.href);
+				if (event.target.getAttribute('href')) changeUrl('', event.target.getAttribute('href'));
 			
 				// Décoche les filtres selectionnés
 				var filtersActive = document.querySelectorAll('.grid-filters li.active');
@@ -140,7 +140,7 @@ GridIsotope.prototype = {
 			if (params.length) url += "?" + params.join("&");
 			var itemLinks = gridItemLinks[i].querySelectorAll('a');
 			for (var j = 0; j < itemLinks.length; j++) {
-				itemLinks[j].href = url;
+                itemLinks[j].setAttribute('href', url);
 			}
 		}
 	},
@@ -252,13 +252,13 @@ GridIsotope.prototype = {
         d1.appendChild(p);
         
         var s = document.createElement("source");
-        s.media = "(max-width: 480px)";
-        s.srcset = datas.imgXS;
+        s.setAttribute('media', '(max-width: 480px)');
+        s.setAttribute('srcset', datas.imgXS);
         p.appendChild(s);
         
         var i = document.createElement("img");
-        i.src = datas.imgMD;
-        i.alt = datas.title;
+        i.setAttribute('src', datas.imgMD);
+        i.setAttribute('alt', datas.title);
         p.appendChild(i);
         
         var d2 = document.createElement("div");
@@ -266,12 +266,12 @@ GridIsotope.prototype = {
         d1.appendChild(d2);
         
         var a1 = document.createElement("a");
-        a1.href = datas.url;
+        a1.setAttribute('href', datas.url);
         a1.classList.add("link-global");
         d2.appendChild(a1);
         
         var a2 = document.createElement("a");
-        a2.href = datas.url;
+        a2.setAttribute('href', datas.url);
         a2.classList.add("name");
         a2.textContent = datas.title;
         d2.appendChild(a2);
@@ -281,7 +281,7 @@ GridIsotope.prototype = {
         d2.appendChild(p2);
         
         var a3 = document.createElement("a");
-        a3.href = datas.url;
+        a3.setAttribute('href', datas.url);
         a3.classList.add("btn");
         a3.classList.add("btn-default");
         a3.textContent = "Voir";
@@ -317,7 +317,7 @@ GridIsotope.prototype = {
 			gridItemLinks[i].dataset.code = "default";	// On ne passe plus le theme, tout theme par defaut
 			gridItemLinks[i].querySelect(".name").textContent = linkParams.titre;
 			gridItemLinks[i].querySelect(".text-b .btn").textContent = linkParams.action;
-			gridItemLinks[i].querySelect(".text-b .btn").href = linkParams.url;
+			gridItemLinks[i].querySelect(".text-b .btn").setAttribute('href', linkParams.url);
 			gridItemLinks[i].querySelect(".text > p").textContent = linkParams.url;
 		}
 	}
